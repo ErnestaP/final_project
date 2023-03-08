@@ -1,0 +1,16 @@
+add eployees: curl --request POST --json '{"name": "Ernesta", "surname": "Petraityte", }' localhost:8000
+curl --request GET "localhost:8000?id=1"
+curl --request DELETE "localhost:8000?id=1"
+
+
+https://www.google.com/search?q=create+a+table+in+postgres+database+fastpi&oq=create+a+table+in+postgres+database+fastpi&aqs=chrome..69i57j33i10i160l3j33i21.13818j0j4&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:8162d33c,vid:Lj7ivxUvSog
+
+curl --request POST --json '{"name": "Ernesta", "surname": "Petraityte"}' localhost:8000
+curl --request POST --json '{"name": "Greta", "surname": "Shindler"}' localhost:8000
+acurl --request POST --json '{"name": "Ema", "surname": "Soledad"}' localhost:8000
+curl --request POST --json '{"name": "Jeremie", "surname": "Alfonso"}' localhost:8000
+curl --request POST --json '{"name": "Joao", "surname": "Clair"}' localhost:8000
+curl --request POST --json '{"name": "Claire", "surname": "McLarens"}' localhost:8000
+curl --request POST --json '{"name": "Arune", "surname": "Cholinas"}' localhost:8000
+curl --request POST --json '{"name": "Linas", "surname": "Labzentis"}' localhost:8000
+

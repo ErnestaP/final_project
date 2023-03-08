@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.3.4"
+  },
+  "resolutions": {
+    "superagent-proxy": "^2.1.0"
+  }
+}

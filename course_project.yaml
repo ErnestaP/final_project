@@ -1,0 +1,42 @@
+version: '3'
+services:
+  server:
+    container_name: project_backend
+    build: 
+      context: ./app
+    command: uvicorn app.main:app --host 0.0.0.0
+    volumes:
+      - .:/app
+    expose:
+      - 8000
+    ports:
+      - "8000:8000"
+  web:
+    build:
+      context: ./ui
+      target: runner
+    volumes:
+      - .:/app
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+  logger:
+    build: 
+      context: ./logs
+      dockerfile: ./logger.Dockerfile
+    image: logger
+  db:
+    container_name: db
+    build: 
+      dockerfile: ./postgres.Dockerfile
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"
+    restart: always
+volumes:
+  postgres-db-volume:
+networks:
+  common-net: {}
